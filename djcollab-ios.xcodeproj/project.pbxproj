@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303517D21E6B4E170053D2BE /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303517CF1E6B4E170053D2BE /* SpotifyAudioPlayback.framework */; };
+		303517D31E6B4E170053D2BE /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303517D01E6B4E170053D2BE /* SpotifyAuthentication.framework */; };
+		303517D41E6B4E170053D2BE /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303517D11E6B4E170053D2BE /* SpotifyMetadata.framework */; };
+		303517D71E6B4F7E0053D2BE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303517D61E6B4F7E0053D2BE /* AVFoundation.framework */; };
+		303517D91E6B4F880053D2BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303517D81E6B4F880053D2BE /* SystemConfiguration.framework */; };
+		303517DC1E6B64110053D2BE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303517DB1E6B64110053D2BE /* TableViewController.swift */; };
+		303517DE1E6B72040053D2BE /* secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 303517DD1E6B72040053D2BE /* secrets.plist */; };
 		308B065C1E6B4C5700CD06D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308B065B1E6B4C5700CD06D6 /* AppDelegate.swift */; };
 		308B065E1E6B4C5700CD06D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308B065D1E6B4C5700CD06D6 /* ViewController.swift */; };
 		308B06611E6B4C5700CD06D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B065F1E6B4C5700CD06D6 /* Main.storyboard */; };
@@ -34,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		303517CF1E6B4E170053D2BE /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		303517D01E6B4E170053D2BE /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		303517D11E6B4E170053D2BE /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
+		303517D61E6B4F7E0053D2BE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		303517D81E6B4F880053D2BE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		303517DA1E6B518F0053D2BE /* djcollab-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "djcollab-Bridging-Header.h"; sourceTree = "<group>"; };
+		303517DB1E6B64110053D2BE /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		303517DD1E6B72040053D2BE /* secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = secrets.plist; sourceTree = "<group>"; };
 		308B06581E6B4C5700CD06D6 /* djcollab-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "djcollab-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308B065B1E6B4C5700CD06D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		308B065D1E6B4C5700CD06D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +69,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303517D91E6B4F880053D2BE /* SystemConfiguration.framework in Frameworks */,
+				303517D71E6B4F7E0053D2BE /* AVFoundation.framework in Frameworks */,
+				303517D21E6B4E170053D2BE /* SpotifyAudioPlayback.framework in Frameworks */,
+				303517D41E6B4E170053D2BE /* SpotifyMetadata.framework in Frameworks */,
+				303517D31E6B4E170053D2BE /* SpotifyAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +94,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303517CE1E6B4DFC0053D2BE /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				303517CF1E6B4E170053D2BE /* SpotifyAudioPlayback.framework */,
+				303517D01E6B4E170053D2BE /* SpotifyAuthentication.framework */,
+				303517D11E6B4E170053D2BE /* SpotifyMetadata.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		303517D51E6B4F7E0053D2BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				303517D81E6B4F880053D2BE /* SystemConfiguration.framework */,
+				303517D61E6B4F7E0053D2BE /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		308B064F1E6B4C5700CD06D6 = {
 			isa = PBXGroup;
 			children = (
+				303517CE1E6B4DFC0053D2BE /* frameworks */,
 				308B065A1E6B4C5700CD06D6 /* djcollab-ios */,
 				308B066F1E6B4C5800CD06D6 /* djcollab-iosTests */,
 				308B067A1E6B4C5800CD06D6 /* djcollab-iosUITests */,
 				308B06591E6B4C5700CD06D6 /* Products */,
+				303517D51E6B4F7E0053D2BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +138,15 @@
 		308B065A1E6B4C5700CD06D6 /* djcollab-ios */ = {
 			isa = PBXGroup;
 			children = (
+				303517DD1E6B72040053D2BE /* secrets.plist */,
 				308B065B1E6B4C5700CD06D6 /* AppDelegate.swift */,
 				308B065D1E6B4C5700CD06D6 /* ViewController.swift */,
 				308B065F1E6B4C5700CD06D6 /* Main.storyboard */,
 				308B06621E6B4C5700CD06D6 /* Assets.xcassets */,
 				308B06641E6B4C5700CD06D6 /* LaunchScreen.storyboard */,
 				308B06671E6B4C5700CD06D6 /* Info.plist */,
+				303517DA1E6B518F0053D2BE /* djcollab-Bridging-Header.h */,
+				303517DB1E6B64110053D2BE /* TableViewController.swift */,
 			);
 			path = "djcollab-ios";
 			sourceTree = "<group>";
@@ -235,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303517DE1E6B72040053D2BE /* secrets.plist in Resources */,
 				308B06661E6B4C5700CD06D6 /* LaunchScreen.storyboard in Resources */,
 				308B06631E6B4C5700CD06D6 /* Assets.xcassets in Resources */,
 				308B06611E6B4C5700CD06D6 /* Main.storyboard in Resources */,
@@ -263,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				308B065E1E6B4C5700CD06D6 /* ViewController.swift in Sources */,
+				303517DC1E6B64110053D2BE /* TableViewController.swift in Sources */,
 				308B065C1E6B4C5700CD06D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,10 +462,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5DXB2AT8VP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "djcollab-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.ksu.cs.mdc.djcollab-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./djcollab-ios/djcollab-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -429,10 +481,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5DXB2AT8VP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "djcollab-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.ksu.cs.mdc.djcollab-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./djcollab-ios/djcollab-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -514,6 +572,7 @@
 				308B06821E6B4C5800CD06D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		308B06831E6B4C5800CD06D6 /* Build configuration list for PBXNativeTarget "djcollab-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +581,7 @@
 				308B06851E6B4C5800CD06D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		308B06861E6B4C5800CD06D6 /* Build configuration list for PBXNativeTarget "djcollab-iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +590,7 @@
 				308B06881E6B4C5800CD06D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
