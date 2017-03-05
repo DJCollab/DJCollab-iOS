@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchTableViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -50,10 +51,11 @@ class SearchTableViewController: UIViewController, UISearchBarDelegate, UITableV
         
         artistString = artistString.substring(to: artistString.index(artistString.endIndex, offsetBy: -2))
         
-        let image = tracks[indexPath.row].album?.smallestCover.imageURL
-        print(image)
+        let imageURL = tracks[indexPath.row].album?.smallestCover.imageURL
         
         cell.authorLabel.text = artistString
+        
+        cell.artImageView.kf_setImage(with: imageURL, placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
 
         return cell
     }

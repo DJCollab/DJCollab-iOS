@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FFD2FD13BF6F1108EDBA478 /* Pods_djcollab_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE52C18B6400E2363BEB3FE /* Pods_djcollab_iosTests.framework */; };
 		303517D21E6B4E170053D2BE /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303517CF1E6B4E170053D2BE /* SpotifyAudioPlayback.framework */; };
 		303517D31E6B4E170053D2BE /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303517D01E6B4E170053D2BE /* SpotifyAuthentication.framework */; };
 		303517D41E6B4E170053D2BE /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303517D11E6B4E170053D2BE /* SpotifyMetadata.framework */; };
@@ -23,6 +24,9 @@
 		308B06661E6B4C5700CD06D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B06641E6B4C5700CD06D6 /* LaunchScreen.storyboard */; };
 		308B06711E6B4C5800CD06D6 /* djcollab_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308B06701E6B4C5800CD06D6 /* djcollab_iosTests.swift */; };
 		308B067C1E6B4C5800CD06D6 /* djcollab_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308B067B1E6B4C5800CD06D6 /* djcollab_iosUITests.swift */; };
+		308F2CD11E6B990B00D13A1D /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308F2CD01E6B990B00D13A1D /* SearchView.storyboard */; };
+		91BE914709294C694010F0DE /* Pods_djcollab_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CB4C83D4B4EC94D2AF8199 /* Pods_djcollab_iosUITests.framework */; };
+		D6833DB7640BCD3137A02379 /* Pods_djcollab_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35AF4D3956A3F6947CC4BC9B /* Pods_djcollab_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0407805CA8FB51C6B9D90014 /* Pods-djcollab-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-djcollab-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-djcollab-iosUITests/Pods-djcollab-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		15283419FB5901CDCD34C50F /* Pods-djcollab-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-djcollab-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-djcollab-iosUITests/Pods-djcollab-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		303517CF1E6B4E170053D2BE /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		303517D01E6B4E170053D2BE /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		303517D11E6B4E170053D2BE /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
@@ -66,6 +72,14 @@
 		308B06771E6B4C5800CD06D6 /* djcollab-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "djcollab-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308B067B1E6B4C5800CD06D6 /* djcollab_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = djcollab_iosUITests.swift; sourceTree = "<group>"; };
 		308B067D1E6B4C5800CD06D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		308F2CD01E6B990B00D13A1D /* SearchView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchView.storyboard; sourceTree = "<group>"; };
+		35AF4D3956A3F6947CC4BC9B /* Pods_djcollab_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_djcollab_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35E81474E6A15301DAABEB84 /* Pods-djcollab-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-djcollab-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-djcollab-iosTests/Pods-djcollab-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		3DF7C68FF3CD12B91525F6F2 /* Pods-djcollab-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-djcollab-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-djcollab-iosTests/Pods-djcollab-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		65A209B579AB35820D44EA43 /* Pods-djcollab-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-djcollab-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-djcollab-ios/Pods-djcollab-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		79CB4C83D4B4EC94D2AF8199 /* Pods_djcollab_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_djcollab_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DE52C18B6400E2363BEB3FE /* Pods_djcollab_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_djcollab_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FFDFCD19878D09F2CFD7C72 /* Pods-djcollab-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-djcollab-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-djcollab-ios/Pods-djcollab-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,7 @@
 				303517D21E6B4E170053D2BE /* SpotifyAudioPlayback.framework in Frameworks */,
 				303517D41E6B4E170053D2BE /* SpotifyMetadata.framework in Frameworks */,
 				303517D31E6B4E170053D2BE /* SpotifyAuthentication.framework in Frameworks */,
+				D6833DB7640BCD3137A02379 /* Pods_djcollab_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FFD2FD13BF6F1108EDBA478 /* Pods_djcollab_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91BE914709294C694010F0DE /* Pods_djcollab_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +130,9 @@
 			children = (
 				303517D81E6B4F880053D2BE /* SystemConfiguration.framework */,
 				303517D61E6B4F7E0053D2BE /* AVFoundation.framework */,
+				35AF4D3956A3F6947CC4BC9B /* Pods_djcollab_ios.framework */,
+				7DE52C18B6400E2363BEB3FE /* Pods_djcollab_iosTests.framework */,
+				79CB4C83D4B4EC94D2AF8199 /* Pods_djcollab_iosUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,6 +146,7 @@
 				308B067A1E6B4C5800CD06D6 /* djcollab-iosUITests */,
 				308B06591E6B4C5700CD06D6 /* Products */,
 				303517D51E6B4F7E0053D2BE /* Frameworks */,
+				6B74A4D8557DE116202E39BD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +174,7 @@
 				303517DB1E6B64110053D2BE /* TableViewController.swift */,
 				303517DF1E6B7F050053D2BE /* Extensions.swift */,
 				303517E11E6B944A0053D2BE /* SongTableViewCell.swift */,
+				308F2CD01E6B990B00D13A1D /* SearchView.storyboard */,
 			);
 			path = "djcollab-ios";
 			sourceTree = "<group>";
@@ -175,6 +197,19 @@
 			path = "djcollab-iosUITests";
 			sourceTree = "<group>";
 		};
+		6B74A4D8557DE116202E39BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65A209B579AB35820D44EA43 /* Pods-djcollab-ios.debug.xcconfig */,
+				9FFDFCD19878D09F2CFD7C72 /* Pods-djcollab-ios.release.xcconfig */,
+				3DF7C68FF3CD12B91525F6F2 /* Pods-djcollab-iosTests.debug.xcconfig */,
+				35E81474E6A15301DAABEB84 /* Pods-djcollab-iosTests.release.xcconfig */,
+				0407805CA8FB51C6B9D90014 /* Pods-djcollab-iosUITests.debug.xcconfig */,
+				15283419FB5901CDCD34C50F /* Pods-djcollab-iosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 308B06801E6B4C5800CD06D6 /* Build configuration list for PBXNativeTarget "djcollab-ios" */;
 			buildPhases = (
+				8351DFDA9C43ACA7BD3BA17F /* [CP] Check Pods Manifest.lock */,
 				308B06541E6B4C5700CD06D6 /* Sources */,
 				308B06551E6B4C5700CD06D6 /* Frameworks */,
 				308B06561E6B4C5700CD06D6 /* Resources */,
+				ECFEF2BF2971E3C37AFC5711 /* [CP] Embed Pods Frameworks */,
+				48C8324792F69E02645E69C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 308B06831E6B4C5800CD06D6 /* Build configuration list for PBXNativeTarget "djcollab-iosTests" */;
 			buildPhases = (
+				CFD44D671FCD2326F0AD7F1C /* [CP] Check Pods Manifest.lock */,
 				308B06681E6B4C5800CD06D6 /* Sources */,
 				308B06691E6B4C5800CD06D6 /* Frameworks */,
 				308B066A1E6B4C5800CD06D6 /* Resources */,
+				383366124E9C4083328A2C35 /* [CP] Embed Pods Frameworks */,
+				D3BCD7E51F617365DA502D95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,9 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 308B06861E6B4C5800CD06D6 /* Build configuration list for PBXNativeTarget "djcollab-iosUITests" */;
 			buildPhases = (
+				08E73DBCAC8E9A624F75D38B /* [CP] Check Pods Manifest.lock */,
 				308B06731E6B4C5800CD06D6 /* Sources */,
 				308B06741E6B4C5800CD06D6 /* Frameworks */,
 				308B06751E6B4C5800CD06D6 /* Resources */,
+				0FD95E3A2DF131C3FE9337C4 /* [CP] Embed Pods Frameworks */,
+				D26982374703691D29E1D2E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				303517DE1E6B72040053D2BE /* secrets.plist in Resources */,
+				308F2CD11E6B990B00D13A1D /* SearchView.storyboard in Resources */,
 				308B06661E6B4C5700CD06D6 /* LaunchScreen.storyboard in Resources */,
 				308B06631E6B4C5700CD06D6 /* Assets.xcassets in Resources */,
 				308B06611E6B4C5700CD06D6 /* Main.storyboard in Resources */,
@@ -312,6 +357,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08E73DBCAC8E9A624F75D38B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0FD95E3A2DF131C3FE9337C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-djcollab-iosUITests/Pods-djcollab-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		383366124E9C4083328A2C35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-djcollab-iosTests/Pods-djcollab-iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48C8324792F69E02645E69C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-djcollab-ios/Pods-djcollab-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8351DFDA9C43ACA7BD3BA17F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CFD44D671FCD2326F0AD7F1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D26982374703691D29E1D2E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-djcollab-iosUITests/Pods-djcollab-iosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3BCD7E51F617365DA502D95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-djcollab-iosTests/Pods-djcollab-iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECFEF2BF2971E3C37AFC5711 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-djcollab-ios/Pods-djcollab-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		308B06541E6B4C5700CD06D6 /* Sources */ = {
@@ -472,6 +655,7 @@
 		};
 		308B06811E6B4C5800CD06D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65A209B579AB35820D44EA43 /* Pods-djcollab-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5DXB2AT8VP;
@@ -491,6 +675,7 @@
 		};
 		308B06821E6B4C5800CD06D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FFDFCD19878D09F2CFD7C72 /* Pods-djcollab-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5DXB2AT8VP;
@@ -510,6 +695,7 @@
 		};
 		308B06841E6B4C5800CD06D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DF7C68FF3CD12B91525F6F2 /* Pods-djcollab-iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -525,6 +711,7 @@
 		};
 		308B06851E6B4C5800CD06D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35E81474E6A15301DAABEB84 /* Pods-djcollab-iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +727,7 @@
 		};
 		308B06871E6B4C5800CD06D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0407805CA8FB51C6B9D90014 /* Pods-djcollab-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5DXB2AT8VP;
@@ -554,6 +742,7 @@
 		};
 		308B06881E6B4C5800CD06D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15283419FB5901CDCD34C50F /* Pods-djcollab-iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5DXB2AT8VP;
