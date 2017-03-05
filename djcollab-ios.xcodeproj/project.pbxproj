@@ -14,6 +14,8 @@
 		303517D91E6B4F880053D2BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303517D81E6B4F880053D2BE /* SystemConfiguration.framework */; };
 		303517DC1E6B64110053D2BE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303517DB1E6B64110053D2BE /* TableViewController.swift */; };
 		303517DE1E6B72040053D2BE /* secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 303517DD1E6B72040053D2BE /* secrets.plist */; };
+		303517E01E6B7F050053D2BE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303517DF1E6B7F050053D2BE /* Extensions.swift */; };
+		303517E21E6B944A0053D2BE /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303517E11E6B944A0053D2BE /* SongTableViewCell.swift */; };
 		308B065C1E6B4C5700CD06D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308B065B1E6B4C5700CD06D6 /* AppDelegate.swift */; };
 		308B065E1E6B4C5700CD06D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308B065D1E6B4C5700CD06D6 /* ViewController.swift */; };
 		308B06611E6B4C5700CD06D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B065F1E6B4C5700CD06D6 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		303517DA1E6B518F0053D2BE /* djcollab-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "djcollab-Bridging-Header.h"; sourceTree = "<group>"; };
 		303517DB1E6B64110053D2BE /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		303517DD1E6B72040053D2BE /* secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = secrets.plist; sourceTree = "<group>"; };
+		303517DF1E6B7F050053D2BE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		303517E11E6B944A0053D2BE /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		308B06581E6B4C5700CD06D6 /* djcollab-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "djcollab-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308B065B1E6B4C5700CD06D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		308B065D1E6B4C5700CD06D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				308B06671E6B4C5700CD06D6 /* Info.plist */,
 				303517DA1E6B518F0053D2BE /* djcollab-Bridging-Header.h */,
 				303517DB1E6B64110053D2BE /* TableViewController.swift */,
+				303517DF1E6B7F050053D2BE /* Extensions.swift */,
+				303517E11E6B944A0053D2BE /* SongTableViewCell.swift */,
 			);
 			path = "djcollab-ios";
 			sourceTree = "<group>";
@@ -239,6 +245,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5DXB2AT8VP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					308B066B1E6B4C5800CD06D6 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -309,7 +320,9 @@
 			files = (
 				308B065E1E6B4C5700CD06D6 /* ViewController.swift in Sources */,
 				303517DC1E6B64110053D2BE /* TableViewController.swift in Sources */,
+				303517E21E6B944A0053D2BE /* SongTableViewCell.swift in Sources */,
 				308B065C1E6B4C5700CD06D6 /* AppDelegate.swift in Sources */,
+				303517E01E6B7F050053D2BE /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
