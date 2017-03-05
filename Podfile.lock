@@ -1,12 +1,15 @@
 PODS:
+  - Eureka (2.0.0-beta.1)
   - Kingfisher (3.4.0)
 
 DEPENDENCIES:
+  - Eureka (~> 2.0.0-beta.1)
   - Kingfisher (~> 3.1)
 
 SPEC CHECKSUMS:
+  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   Kingfisher: 5690cfb3d1bddf3a98d679a3a34d0b7294974ed2
 
-PODFILE CHECKSUM: 78b16d069d26909289b2769f2fd013e6953745bb
+PODFILE CHECKSUM: dc926d0c6d57700b5ad8da2294643b9eac90dd33
 
 COCOAPODS: 1.1.1

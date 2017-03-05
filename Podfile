@@ -7,6 +7,7 @@ target 'djcollab-ios' do
 
   # Pods for djcollab-ios
   pod 'Kingfisher', '~> 3.1' 
+  pod 'Eureka', '~> 2.0.0-beta.1' 
 
   target 'djcollab-iosTests' do
     inherit! :search_paths

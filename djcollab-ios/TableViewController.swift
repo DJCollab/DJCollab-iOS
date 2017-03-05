@@ -9,10 +9,16 @@
 import UIKit
 import Kingfisher
 
+protocol SearchTableViewControllerDelegate: class {
+    func didSelectTrack(track:SPTPartialTrack)
+    func didCancel()
+}
+
 class SearchTableViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     var tracks:[SPTPartialTrack] = []
+    weak var delegate:SearchTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +26,6 @@ class SearchTableViewController: UIViewController, UISearchBarDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         dismissKeyboardOnTap()
-        
-        search(query:  "Porter Robinson")
     }
 
     // MARK: - Table view data source
@@ -55,19 +59,20 @@ class SearchTableViewController: UIViewController, UISearchBarDelegate, UITableV
         
         cell.authorLabel.text = artistString
         
-        cell.artImageView.kf_setImage(with: imageURL, placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
+        cell.artImageView.kf.setImage(with: imageURL, placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let player = SPTAudioStreamingController.sharedInstance()
+        delegate?.didSelectTrack(track: tracks[indexPath.row])
+        /*let player = SPTAudioStreamingController.sharedInstance()
         let url = "\((tracks[indexPath.row].playableUri)!)"
         player?.playSpotifyURI(url, startingWith: 0, startingWithPosition: 0, callback: { (error) in
             if let _err = error{
                 print(_err)
             }
-        })
+        })*/
     }
     
     // MARK: - UISearchBar
@@ -80,6 +85,7 @@ class SearchTableViewController: UIViewController, UISearchBarDelegate, UITableV
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        delegate?.didCancel()
     }
     
     private func search(query:String){

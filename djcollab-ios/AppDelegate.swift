@@ -78,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTAudioStreamingDelegate
     }
     
     func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
-        window?.rootViewController?.performSegue(withIdentifier: "toTableViewController", sender: nil)
+        window?.rootViewController?.performSegue(withIdentifier: "toTabViewController", sender: nil)
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
