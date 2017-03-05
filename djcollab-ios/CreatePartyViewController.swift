@@ -11,6 +11,8 @@ import Eureka
 
 class CreatePartyViewController: FormViewController {
 
+    var id = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +36,30 @@ class CreatePartyViewController: FormViewController {
                 $0.title = "Create/Claim Party"
             }
             .onCellSelection { (cell, row) in
-                self.performSegue(withIdentifier: "toHostPlaylistView", sender: self)
+                if(nameRow.value == nil || nameRow.value == ""){
+                    self.alertInvalidInput("Error", message: "Please provide a party name")
+                }
+                if(createClaimRow.value ?? true){
+                    RestClient.CreateParty(name: nameRow.value!, { (success, statusCode, json) in
+                        if(success){
+                            self.id = json!["id"]! as! Int
+                            self.performSegue(withIdentifier: "toHostPlaylistView", sender: self)
+                        }
+                        else{
+                            self.alertInvalidInput("Error", message: "Please try again")
+                        }
+                    })
+                } else {
+                    RestClient.PartyByName(name: nameRow.value!, { (success, statusCode, json) in
+                        if(success){
+                            self.id = json!["id"]! as! Int
+                            self.performSegue(withIdentifier: "toHostPlaylistView", sender: self)
+                        }
+                        else{
+                            self.alertInvalidInput("Error", message: "Please try again")
+                        }
+                    })
+                }
             }
         
         
@@ -46,14 +71,15 @@ class CreatePartyViewController: FormViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? HostPlaylistViewController {
+            vc.id = id
+        }
     }
-    */
+    
 
 }

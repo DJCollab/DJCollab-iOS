@@ -1,15 +1,21 @@
 PODS:
+  - Alamofire (4.3.0)
   - Eureka (2.0.0-beta.1)
+  - Gloss (1.2.1)
   - Kingfisher (3.4.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - Eureka (~> 2.0.0-beta.1)
+  - Gloss (~> 1.0)
   - Kingfisher (~> 3.1)
 
 SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
+  Gloss: 9ab33b8ede01e4232571d43a6bf9259b85d1de69
   Kingfisher: 5690cfb3d1bddf3a98d679a3a34d0b7294974ed2
 
-PODFILE CHECKSUM: dc926d0c6d57700b5ad8da2294643b9eac90dd33
+PODFILE CHECKSUM: a9a8574894c08477f9df2968bc713f4e60b9ef6b
 
 COCOAPODS: 1.1.1

@@ -8,11 +8,14 @@
 
 import UIKit
 import Kingfisher
+import Gloss
 
 class SongFeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SearchTableViewControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var tracks:[SPTPartialTrack] = []
+    
+    var id = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +25,22 @@ class SongFeedViewController: UIViewController, UITableViewDataSource, UITableVi
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTrack))
         
-        let sArr = ["spotify:track:58s6EuEYJdlb0kO7awm3Vp"].map({URL(string: $0)!})
-        
-        SPTTrack.tracks(withURIs: sArr, accessToken: nil, market: nil) { (error, resp) in
-            if(resp != nil){
-                let trackArr = resp as! [SPTTrack]
-                self.tracks = trackArr
-                self.tableView.reloadData()
+        RestClient.Queue(partyID: id) { (success, statusCode, json) in
+            if(success){
+                var uris:[String] = []
+                for item in json!["items"]! as! [JSON] {
+                    uris.append(item["song_id"] as! String)
+                }
+                
+                SPTTrack.tracks(withURIs: uris.map({ URL(string: $0)! }), accessToken: nil, market: nil) { (error, resp) in
+                    if(resp != nil){
+                        let trackArr = resp as! [SPTTrack]
+                        self.tracks = trackArr
+                        self.tableView.reloadData()
+                    }
+                }
+            }else {
+                self.alertInvalidInput("Error", message: "")
             }
         }
     }
@@ -79,6 +91,7 @@ class SongFeedViewController: UIViewController, UITableViewDataSource, UITableVi
     func didSelectTrack(track: SPTPartialTrack) {
         tracks.append(track)
         tableView.reloadData()
+        RestClient.AddSong(partyID: id, songURI: "\(track.playableUri!)") { (_, _, _) in }
         dismiss(animated: true, completion: nil)
     }
     

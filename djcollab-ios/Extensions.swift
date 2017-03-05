@@ -24,4 +24,10 @@ extension UIViewController {
     func keyboardDidHide(){
         view.removeGestureRecognizer((view.gestureRecognizers?.last)!)
     }
+    
+    func alertInvalidInput(_ title:String, message:String?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

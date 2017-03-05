@@ -66,13 +66,6 @@ class SearchTableViewController: UIViewController, UISearchBarDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.didSelectTrack(track: tracks[indexPath.row])
-        /*let player = SPTAudioStreamingController.sharedInstance()
-        let url = "\((tracks[indexPath.row].playableUri)!)"
-        player?.playSpotifyURI(url, startingWith: 0, startingWithPosition: 0, callback: { (error) in
-            if let _err = error{
-                print(_err)
-            }
-        })*/
     }
     
     // MARK: - UISearchBar

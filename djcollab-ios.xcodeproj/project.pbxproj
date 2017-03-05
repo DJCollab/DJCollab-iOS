@@ -21,6 +21,7 @@
 		30376EE91E6BBDE400C13A6E /* HostPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30376EE81E6BBDE400C13A6E /* HostPlaylistViewController.swift */; };
 		30376EEB1E6BC72C00C13A6E /* CreatePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30376EEA1E6BC72C00C13A6E /* CreatePartyViewController.swift */; };
 		30376EED1E6BCA2400C13A6E /* JoinPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30376EEC1E6BCA2400C13A6E /* JoinPartyViewController.swift */; };
+		30376EEF1E6BCFE100C13A6E /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30376EEE1E6BCFE100C13A6E /* RestClient.swift */; };
 		308B065C1E6B4C5700CD06D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308B065B1E6B4C5700CD06D6 /* AppDelegate.swift */; };
 		308B065E1E6B4C5700CD06D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308B065D1E6B4C5700CD06D6 /* ViewController.swift */; };
 		308B06611E6B4C5700CD06D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308B065F1E6B4C5700CD06D6 /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		30376EE81E6BBDE400C13A6E /* HostPlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostPlaylistViewController.swift; sourceTree = "<group>"; };
 		30376EEA1E6BC72C00C13A6E /* CreatePartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePartyViewController.swift; sourceTree = "<group>"; };
 		30376EEC1E6BCA2400C13A6E /* JoinPartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinPartyViewController.swift; sourceTree = "<group>"; };
+		30376EEE1E6BCFE100C13A6E /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		308B06581E6B4C5700CD06D6 /* djcollab-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "djcollab-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		308B065B1E6B4C5700CD06D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		308B065D1E6B4C5700CD06D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				30376EE81E6BBDE400C13A6E /* HostPlaylistViewController.swift */,
 				30376EEA1E6BC72C00C13A6E /* CreatePartyViewController.swift */,
 				30376EEC1E6BCA2400C13A6E /* JoinPartyViewController.swift */,
+				30376EEE1E6BCFE100C13A6E /* RestClient.swift */,
 			);
 			path = "djcollab-ios";
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				30376EED1E6BCA2400C13A6E /* JoinPartyViewController.swift in Sources */,
 				308B065C1E6B4C5700CD06D6 /* AppDelegate.swift in Sources */,
 				303517E01E6B7F050053D2BE /* Extensions.swift in Sources */,
+				30376EEF1E6BCFE100C13A6E /* RestClient.swift in Sources */,
 				30376EEB1E6BC72C00C13A6E /* CreatePartyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
