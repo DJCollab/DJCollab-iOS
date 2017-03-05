@@ -9,7 +9,7 @@
 import UIKit
 import Gloss
 
-class HostPlaylistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SearchTableViewControllerDelegate {
+class HostPlaylistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SearchTableViewControllerDelegate, SPTAudioStreamingPlaybackDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
@@ -24,7 +24,7 @@ class HostPlaylistViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        player?.playbackDelegate = self
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -54,30 +54,33 @@ class HostPlaylistViewController: UIViewController, UITableViewDataSource, UITab
         }
         
         Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { (t) in
-            RestClient.Queue(partyID: self.id) { (success, statusCode, json) in
-                if(success){
-                    var uris:[String] = []
-                    for item in json!["items"]! as! [JSON] {
-                        uris.append(item["song_id"] as! String)
-                    }
-                    
-                    if(uris.count <= self.tracks.count){
-                        return
-                    }
-                    
-                    SPTTrack.tracks(withURIs: uris.map({ URL(string: $0)! }), accessToken: nil, market: nil) { (error, resp) in
-                        if(resp != nil){
-                            let trackArr = resp as! [SPTTrack]
-                            self.tracks = trackArr
-                            self.tableView.reloadData()
-                            self.setCurrentPlaying()
-                        }
+            self.poll()
+        }
+    }
+    
+    func poll(){
+        RestClient.Queue(partyID: self.id) { (success, statusCode, json) in
+            if(success){
+                var uris:[String] = []
+                for item in json!["items"]! as! [JSON] {
+                    uris.append(item["song_id"] as! String)
+                }
+                
+                if(uris.count <= self.tracks.count){
+                    return
+                }
+                
+                SPTTrack.tracks(withURIs: uris.map({ URL(string: $0)! }), accessToken: nil, market: nil) { (error, resp) in
+                    if(resp != nil){
+                        let trackArr = resp as! [SPTTrack]
+                        self.tracks = trackArr
+                        self.tableView.reloadData()
+                        self.setCurrentPlaying()
                     }
                 }
             }
         }
     }
-    
     
     func addTrack() {
         let vc = UIStoryboard(name: "SearchView", bundle: nil).instantiateInitialViewController() as? SearchTableViewController
@@ -87,10 +90,9 @@ class HostPlaylistViewController: UIViewController, UITableViewDataSource, UITab
     
     // MARK: - Search View Delegate
     func didSelectTrack(track: SPTPartialTrack) {
-        tracks.append(track)
-        tableView.reloadData()
         RestClient.AddSong(partyID: id, songURI: "\(track.playableUri!)") { (_, _, _) in }
         dismiss(animated: true, completion: nil)
+        self.poll()
     }
     
     func didCancel() {
@@ -187,8 +189,6 @@ class HostPlaylistViewController: UIViewController, UITableViewDataSource, UITab
         
         return cell
     }
-    
-    
     /*
      // MARK: - Navigation
      

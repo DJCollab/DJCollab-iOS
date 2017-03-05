@@ -25,6 +25,12 @@ class SongFeedViewController: UIViewController, UITableViewDataSource, UITableVi
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTrack))
         
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (t) in
+            self.poll()
+        }
+    }
+    
+    func poll() {
         RestClient.Queue(partyID: id) { (success, statusCode, json) in
             if(success){
                 var uris:[String] = []
@@ -33,10 +39,13 @@ class SongFeedViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
                 
                 SPTTrack.tracks(withURIs: uris.map({ URL(string: $0)! }), accessToken: nil, market: nil) { (error, resp) in
+                    
                     if(resp != nil){
                         let trackArr = resp as! [SPTTrack]
                         self.tracks = trackArr
                         self.tableView.reloadData()
+                    }else{
+                        print(error)
                     }
                 }
             }else {
