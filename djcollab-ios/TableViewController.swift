@@ -8,47 +8,87 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class SearchTableViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
     var tracks:[SPTPartialTrack] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        dismissKeyboardOnTap()
+        
+        search(query:  "Porter Robinson")
+    }
 
+    // MARK: - Table view data source
 
-        SPTSearch.perform(withQuery: "Porter Robinson", queryType: .queryTypeTrack, accessToken: nil) { (error, resp) in
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tracks.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as? SongTableViewCell else {
+            return UITableViewCell()
+        }
+
+        cell.titleLabel?.text = tracks[indexPath.row].name
+        
+        let artists:[SPTPartialArtist]! = tracks[indexPath.row].artists as! [SPTPartialArtist]
+        
+        var artistString = ""
+        
+        for artist in artists{
+            artistString += (artist.name + ", ")
+        }
+        
+        artistString = artistString.substring(to: artistString.index(artistString.endIndex, offsetBy: -2))
+        
+        let image = tracks[indexPath.row].album?.smallestCover.imageURL
+        print(image)
+        
+        cell.authorLabel.text = artistString
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let player = SPTAudioStreamingController.sharedInstance()
+        let url = "\((tracks[indexPath.row].playableUri)!)"
+        player?.playSpotifyURI(url, startingWith: 0, startingWithPosition: 0, callback: { (error) in
+            if let _err = error{
+                print(_err)
+            }
+        })
+    }
+    
+    // MARK: - UISearchBar
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let query = searchBar.text {
+            search(query: query)
+            searchBar.resignFirstResponder()
+        }
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    private func search(query:String){
+        SPTSearch.perform(withQuery: query, queryType: .queryTypeTrack, accessToken: nil) { (error, resp) in
             let page = resp as! SPTListPage
             self.tracks = page.items as! [SPTPartialTrack]? ?? []
             self.tableView.reloadData()
             
         }
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tracks.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        cell.textLabel?.text = tracks[indexPath.row].name
-
-        return cell
-    }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let player = SPTAudioStreamingController.sharedInstance()
-        let url = "\((tracks[indexPath.row].playableUri)!)"
-        player?.playSpotifyURI(url, startingWith: 0, startingWithPosition: 0, callback: { (error) in
-        })
-    }
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
